@@ -5,9 +5,9 @@
 // Proyecto: Juego C
 // Curso: Plataformas
 // Estudinates:
-// Juárez Moraga Adonay B74047
+// Juarez Moraga Adonay B74047
 // Prado Franklin
-// Abarca Obregón Nelber
+// Abarca Obregon Nelber
 
 /* Este programa simula el juego ahorcado, que es basicamente
    tratar de adivinar la palabra escondida propuesta por un tercero.
@@ -30,13 +30,13 @@ int main() {
 
     printf("\n\tInstrucciones: El ordenador pensar  una palabra y tienes 10");
 
-    printf("\n\tintentos para acertarla. En cada intento podrás elegir una letra.");
+    printf("\n\tintentos para acertarla. En cada intento puedes elegir una letra.");
 
-    printf("\n\tSí la palabra a adivinar la contiene, aparecer  en su corres-");
+    printf("\n\tSi la palabra a adivinar la contiene, aparecer  en su corres-");
 
-    printf("\n\tpondiente posición. Sino, tendr s un intento menos.Hasta agotar");
+    printf("\n\tpondiente posicion. Sino, tendr s un intento menos.Hasta agotar");
 
-    printf("\n\tlos 10. ­­­­BUENA SUERTE!!!");
+    printf("\n\tlos 10. BUENA SUERTE!!!");
 
     printf("\n\n");
     printf("Introduzca la palabra a adivinar: ");
@@ -50,3 +50,113 @@ int main() {
 
     rep[0] = ' ';
     rep[1] = '\0';
+
+
+    do {
+                system("cls");
+        temp=0;
+
+        if(inicial == 0) {
+         for(i=0;i<strlen(frase);i++) {
+          if(frase[i] == ' ') {
+            temporal[i] = ' ';
+             longitud++;
+          }
+          else {
+             temporal[i] = '_';
+             longitud++;
+
+          }
+         }
+        }
+
+        inicial = 1;
+
+        temporal[longitud] = '\0';
+
+        for(i=0;i<strlen(rep);i++) {
+           if(rep[i] == pal) {
+            repetido = 1;
+
+            break;
+          }
+          else {
+           repetido = 0;
+
+         }
+        }
+
+        if(repetido == 0) {
+         for(i=0;i<strlen(frase);i++) {
+                    if(frase[i] == pal) {
+             temporal[i] = pal;
+              acertado++;
+              temp=1;
+            }
+          }
+        }
+
+        if(repetido == 0) {
+         if(temp == 0) {
+
+           oportunidades = oportunidades - 1;
+
+         }
+        }
+        else {
+         printf("Ya se ha introducido este caracter");
+         printf("\n\n");
+
+        }
+
+        printf("\n");
+
+
+        for(i=0;i<strlen(temporal);i++) {
+         printf(" %c ",temporal[i]);
+
+        }
+
+        printf("\n");
+
+        if(strcmp(frase,temporal) == 0) {
+            gano = 1;
+            break;
+        }
+
+        printf("\n");
+        printf("Letras Acertadas: %d",acertado);
+        printf("\n");
+        printf("Oportunidades Restantes: %d",oportunidades);
+        printf("\n");
+
+
+        rep[j] = pal;
+        j++;
+
+        if (oportunidades==0)
+        {
+
+           break;
+        }
+
+        printf("Introduzca una letra:");
+        scanf("\n%c",&pal);
+
+    }while(oportunidades != 0);
+
+
+    if(gano) {
+                printf("\n\n");
+        printf("Enhorabuena, has ganado.");
+    }
+    else {
+                printf("\n\n");
+        printf("Has perdido.");
+    }
+
+    printf("\n\n");
+    system("PAUSE");
+    return 0;
+    
+}
