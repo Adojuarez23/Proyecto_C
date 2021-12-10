@@ -18,7 +18,7 @@ int main() {
     int longitud,i,j,inicial,acertado=0,temp=0,oportunidades=7;
     int repetido=0,gano=0;
 
-
+    // Se presenta el menú de inicio 
 
     printf("\n\t=======================================");
 
@@ -43,7 +43,8 @@ int main() {
     gets(frase);
 
     system("cls");
-
+    
+    // Declaramos variables necesarias 
     longitud = 0;
     inicial = 0;
     j = 0;
@@ -51,7 +52,7 @@ int main() {
     rep[0] = ' ';
     rep[1] = '\0';
 
-
+    // Bucle que determina cantidad aciertos en el juego
     do {
                 system("cls");
         temp=0;
@@ -73,7 +74,12 @@ int main() {
         inicial = 1;
 
         temporal[longitud] = '\0';
+        
 
+        /*
+         Estructura de control que almacena datos
+         y notifica ciertos eventos durante el juego 
+        */
         for(i=0;i<strlen(rep);i++) {
            if(rep[i] == pal) {
             repetido = 1;
@@ -85,9 +91,9 @@ int main() {
 
          }
         }
-
+        // Estructura de control indica aciertos
         if(repetido == 0) {
-         for(i=0;i<strlen(frase);i++) {
+         for(i=0; i<strlen(frase); i++) {
                     if(frase[i] == pal) {
              temporal[i] = pal;
               acertado++;
@@ -95,7 +101,7 @@ int main() {
             }
           }
         }
-
+        // Control de oportunidades en el juego
         if(repetido == 0) {
          if(temp == 0) {
 
@@ -104,26 +110,28 @@ int main() {
          }
         }
         else {
-         printf("Ya se ha introducido este caracter");
+         printf("Ya ha introducido este caracter");
          printf("\n\n");
 
         }
 
         printf("\n");
 
-
-        for(i=0;i<strlen(temporal);i++) {
+        // Imprime letras acertadas      
+        for(i=0 ; i<strlen(temporal); i++) {
          printf(" %c ",temporal[i]);
 
         }
 
         printf("\n");
+        
 
+        // Completa el juego
         if(strcmp(frase,temporal) == 0) {
             gano = 1;
             break;
         }
-
+        
         printf("\n");
         printf("Letras Acertadas: %d",acertado);
         printf("\n");
@@ -211,7 +219,10 @@ int main() {
 
         printf("Introduzca una letra:");
         scanf("\n%c",&pal);
+    
 
+    // Bucle de control de oportunidades
+    // Notificación de victoria o derrota
     }while(oportunidades != 0);
 
 
