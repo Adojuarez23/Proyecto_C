@@ -15,7 +15,7 @@
 int main() {
     char frase[60],rep[100],temporal[100];
     char pal;
-    int longitud,i,j,inicial,acertado=0,temp=0,oportunidades=8;
+    int longitud,i,j,inicial,acertado=0,temp=0,oportunidades=7;
     int repetido=0,gano=0;
 
 
@@ -133,9 +133,78 @@ int main() {
 
         rep[j] = pal;
         j++;
+       if (oportunidades==7)
+	{
+            puts("  _ _ ");
+            puts(" |    ");
+            puts(" |    ");
+            puts(" |   ");
+            puts(" |    ");
+            puts("_|_  ");
+	}
+	if (oportunidades==6)
+	{
+            puts("  _ _ ");
+            puts(" |    ");
+            puts(" |  \e[0;91m O \e[0m");
+            puts(" |   ");
+            puts(" |    ");
+            puts("_|_  ");
+	}
+	if (oportunidades==5)
+	{
+            puts("  _ _ ");
+            puts(" |    ");
+            puts(" |  \e[0;91m O \e[0m");
+            puts(" | \e[0;91m / \e[0m ");
+            puts(" |    ");
+            puts("_|_  ");
+	}
+	if (oportunidades==4)
+	{
+            puts("  _ _ ");
+            puts(" |    ");
+            puts(" |  \e[0;91m O \e[0m");
+            puts(" | \e[0;91m /\e[0m\e[0;91m \\ \e[0m");
+            puts(" |    ");
+            puts("_|_  ");
+	}
+	if (oportunidades==3)
+	{
+            puts("  _ _ ");
+            puts(" |    ");
+            puts(" |  \e[0;91m O \e[0m");
+            puts(" | \e[0;91m /\e[0m\e[0;91m \\ \e[0m");
+            puts(" |  \e[0;91m | \e[0m");
+            puts("_|_  ");
+	}
+	if (oportunidades==2)
+	{
+            puts("  _ _ ");
+            puts(" |    ");
+            puts(" |  \e[0;91m O \e[0m");
+            puts(" | \e[0;91m /\e[0m\e[0;91m \\ \e[0m");
+            puts(" |  \e[0;91m | \e[0m");
+            puts("_|_\e[0;91m /  \e[0m");
+	}
+	if (oportunidades==1)
+	{
+            puts("  _ _ ");
+            puts(" |    ");
+            puts(" |  \e[0;91m O \e[0m");
+            puts(" | \e[0;91m /\e[0m\e[0;91m \\ \e[0m");
+            puts(" |  \e[0;91m | \e[0m");
+            puts("_|_\e[0;91m /\e[0m\e[0;91m \\ \e[0m");
+	}  
 
-        if (oportunidades==0)
+   if (oportunidades==0)
         {
+            puts("  _ _ ");
+            puts(" |    |");
+            puts(" |  \e[0;91m O \e[0m");
+            puts(" | \e[0;91m /\e[0m\e[0;91m \\ \e[0m");
+            puts(" |  \e[0;91m | \e[0m");
+            puts("_|_\e[0;91m /\e[0m\e[0;91m \\ \e[0m");
 
            break;
         }
