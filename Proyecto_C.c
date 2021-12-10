@@ -30,7 +30,7 @@ int main() {
 
     printf("");
 
-    printf("\n\tInstrucciones: El ordenador 1 debe ingresar una palabra y tienes 6");
+    printf("\n\tInstrucciones: El ordenador 1 debe ingresar una palabra y tienes 7");
 
     printf("\n\tintentos para acertarla. En cada intento puedes elegir una letra.");
 
