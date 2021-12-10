@@ -6,12 +6,14 @@
 // Curso: Plataformas
 // Estudinates:
 // Juarez Moraga Adonay B74047
-// Prado Franklin
-// Abarca Obregon Nelber
+// Calderon Prado Franklin B81405
+// Abarca Obregon Nelber  B60022
 
 /* Este programa simula el juego ahorcado, que es basicamente
    tratar de adivinar la palabra escondida propuesta por un tercero.
 */
+
+// Se realiza la funcion principal
 int main() {
     char frase[60],rep[100],temporal[100];
     char pal;
@@ -28,15 +30,15 @@ int main() {
 
     printf("");
 
-    printf("\n\tInstrucciones: El ordenador pensar  una palabra y tienes 10");
+    printf("\n\tInstrucciones: El ordenador 1 debe ingresar una palabra y tienes 6");
 
     printf("\n\tintentos para acertarla. En cada intento puedes elegir una letra.");
 
     printf("\n\tSi la palabra a adivinar la contiene, aparecer  en su corres-");
 
-    printf("\n\tpondiente posicion. Sino, tendr s un intento menos.Hasta agotar");
+    printf("\n\tpondiente posicion. Sino, tendra un intento menos, hasta agotar");
 
-    printf("\n\tlos 10. BUENA SUERTE!!!");
+    printf("\n\tlos 6 intentos. BUENA SUERTE!!!");
 
     printf("\n\n");
     printf("Introduzca la palabra a adivinar: ");
@@ -228,11 +230,11 @@ int main() {
 
     if(gano) {
                 printf("\n\n");
-        printf("Enhorabuena, has ganado.");
+        printf("¡¡Felicidades, has ganado!!");
     }
     else {
                 printf("\n\n");
-        printf("Has perdido.");
+        printf("¡¡Lo siento, perdiste!!");
     }
 
     printf("\n\n");
