@@ -17,7 +17,7 @@
 int main() {
     char frase[60],rep[100],temporal[100];
     char pal;
-    int longitud,i,j,inicial,acertado=0,temp=0,oportunidades=7;
+    int longitud,i,j,inicial,acertado=0,temp=1,oportunidades=7;
     int repetido=0,gano=0;
 
     // Se presenta el menú de inicio 
@@ -56,85 +56,9 @@ int main() {
 
     // Bucle que determina cantidad aciertos en el juego
     do {
-                system("cls");
-        temp=0;
-	 if (oportunidades==7)
-	{
-            puts("  _ _ ");
-            puts(" |    ");
-            puts(" |    ");     // solo la base de la horca
-            puts(" |   ");
-            puts(" |    ");
-            puts("_|_  ");
-	}
-	if (oportunidades==6)
-	{
-            puts("  _ _ ");
-            puts(" |    ");
-            puts(" |  \e[0;91m O \e[0m");  // la base y la cabeza
-            puts(" |   ");
-            puts(" |    ");
-            puts("_|_  ");
-	}
-	if (oportunidades==5)
-	{
-            puts("  _ _ ");
-            puts(" |    ");
-            puts(" |  \e[0;91m O \e[0m");  
-            puts(" | \e[0;91m / \e[0m ");   // la base, cabeza y un brazo
-            puts(" |    ");
-            puts("_|_  ");
-	}
-	if (oportunidades==4)
-	{
-            puts("  _ _ ");
-            puts(" |    ");
-            puts(" |  \e[0;91m O \e[0m");
-            puts(" | \e[0;91m /\e[0m\e[0;91m \\ \e[0m");  // la base, cabeza y los dos brazos
-            puts(" |    ");
-            puts("_|_  ");
-	}
-	if (oportunidades==3)
-	{
-            puts("  _ _ ");
-            puts(" |    ");
-            puts(" |  \e[0;91m O \e[0m");
-            puts(" | \e[0;91m /\e[0m\e[0;91m \\ \e[0m");   // la base, cabeza, dos brazos y el cuerpo
-            puts(" |  \e[0;91m | \e[0m");
-            puts("_|_  ");
-	}
-	if (oportunidades==2)
-	{
-            puts("  _ _ ");
-            puts(" |    ");
-            puts(" |  \e[0;91m O \e[0m");
-            puts(" | \e[0;91m /\e[0m\e[0;91m \\ \e[0m");
-            puts(" |  \e[0;91m | \e[0m");
-            puts("_|_\e[0;91m /  \e[0m");		// la base, cabeza, dos brazos, el cuerpo y un pie
-	}
-	if (oportunidades==1)
-	{
-            puts("  _ _ ");
-            puts(" |    ");
-            puts(" |  \e[0;91m O \e[0m");
-            puts(" | \e[0;91m /\e[0m\e[0;91m \\ \e[0m");
-            puts(" |  \e[0;91m | \e[0m");
-            puts("_|_\e[0;91m /\e[0m\e[0;91m \\ \e[0m");  // la base, cabeza, dos brazos, el cuerpo y los pies
-	}  
-
-   if (oportunidades==0)
-        {
-            puts("  _ _ ");
-            puts(" |    |");
-            puts(" |  \e[0;91m O \e[0m");
-            puts(" | \e[0;91m /\e[0m\e[0;91m \\ \e[0m");
-            puts(" |  \e[0;91m | \e[0m");
-            puts("_|_\e[0;91m /\e[0m\e[0;91m \\ \e[0m");  //  // la base, cabeza, dos brazos, el cuerpo, los dos pies y la cuerda que ahorca al personaje
-
-           break;
-        }
-
-        if(inicial == 0) {
+            system("cls");
+       
+        if (inicial == 0) {
          for(i=0;i<strlen(frase);i++) {
           if(frase[i] == ' ') {
             temporal[i] = ' ';
@@ -219,7 +143,82 @@ int main() {
         rep[j] = pal;
         j++;
 	    // se presenta la figura del ahorcado de acuerdo a las oportundades restantes
-      
+       if (oportunidades==7)
+	{
+            puts("  _ _ ");
+            puts(" |    ");
+            puts(" |    ");     // solo la base de la horca
+            puts(" |   ");
+            puts(" |    ");
+            puts("_|_  ");
+	}
+	if (oportunidades==6)
+	{
+            puts("  _ _ ");
+            puts(" |    ");
+            puts(" |  \e[0;91m O \e[0m");  // la base y la cabeza
+            puts(" |   ");
+            puts(" |    ");
+            puts("_|_  ");
+	}
+	if (oportunidades==5)
+	{
+            puts("  _ _ ");
+            puts(" |    ");
+            puts(" |  \e[0;91m O \e[0m");  
+            puts(" | \e[0;91m / \e[0m ");   // la base, cabeza y un brazo
+            puts(" |    ");
+            puts("_|_  ");
+	}
+	if (oportunidades==4)
+	{
+            puts("  _ _ ");
+            puts(" |    ");
+            puts(" |  \e[0;91m O \e[0m");
+            puts(" | \e[0;91m /\e[0m\e[0;91m \\ \e[0m");  // la base, cabeza y los dos brazos
+            puts(" |    ");
+            puts("_|_  ");
+	}
+	if (oportunidades==3)
+	{
+            puts("  _ _ ");
+            puts(" |    ");
+            puts(" |  \e[0;91m O \e[0m");
+            puts(" | \e[0;91m /\e[0m\e[0;91m \\ \e[0m");   // la base, cabeza, dos brazos y el cuerpo
+            puts(" |  \e[0;91m | \e[0m");
+            puts("_|_  ");
+	}
+	if (oportunidades==2)
+	{
+            puts("  _ _ ");
+            puts(" |    ");
+            puts(" |  \e[0;91m O \e[0m");
+            puts(" | \e[0;91m /\e[0m\e[0;91m \\ \e[0m");
+            puts(" |  \e[0;91m | \e[0m");
+            puts("_|_\e[0;91m /  \e[0m");		// la base, cabeza, dos brazos, el cuerpo y un pie
+	}
+	if (oportunidades==1)
+	{
+            puts("  _ _ ");
+            puts(" |    ");
+            puts(" |  \e[0;91m O \e[0m");
+            puts(" | \e[0;91m /\e[0m\e[0;91m \\ \e[0m");
+            puts(" |  \e[0;91m | \e[0m");
+            puts("_|_\e[0;91m /\e[0m\e[0;91m \\ \e[0m");  // la base, cabeza, dos brazos, el cuerpo y los pies
+	}  
+
+   if (oportunidades==0)
+        {
+            puts("  _ _ ");
+            puts(" |    |");
+            puts(" |  \e[0;91m O \e[0m");
+            puts(" | \e[0;91m /\e[0m\e[0;91m \\ \e[0m");
+            puts(" |  \e[0;91m | \e[0m");
+            puts("_|_\e[0;91m /\e[0m\e[0;91m \\ \e[0m");  //  // la base, cabeza, dos brazos, el cuerpo, los dos pies y la cuerda que ahorca al personaje
+
+           break;
+        }
+	 temp=0;
 
         printf("Introduzca una letra:");
         scanf("\n%c",&pal);
